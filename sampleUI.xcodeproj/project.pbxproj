@@ -17,6 +17,8 @@
 		71665EB226F83883001A2797 /* sampleUIUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71665EB126F83883001A2797 /* sampleUIUITests.swift */; };
 		71665ECD26F89FDB001A2797 /* UICustomView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71665ECB26F89FDB001A2797 /* UICustomView.swift */; };
 		71665ECE26F89FDB001A2797 /* UIGradientView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71665ECC26F89FDB001A2797 /* UIGradientView.swift */; };
+		71665ED126F8A213001A2797 /* Kanit-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 71665ECF26F8A213001A2797 /* Kanit-Regular.ttf */; };
+		71665ED226F8A213001A2797 /* Kanit-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 71665ED026F8A213001A2797 /* Kanit-Light.ttf */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -53,6 +55,8 @@
 		71665EB326F83883001A2797 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		71665ECB26F89FDB001A2797 /* UICustomView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UICustomView.swift; sourceTree = "<group>"; };
 		71665ECC26F89FDB001A2797 /* UIGradientView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIGradientView.swift; sourceTree = "<group>"; };
+		71665ECF26F8A213001A2797 /* Kanit-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Kanit-Regular.ttf"; sourceTree = "<group>"; };
+		71665ED026F8A213001A2797 /* Kanit-Light.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Kanit-Light.ttf"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -153,6 +157,8 @@
 		71665EC226F83A9C001A2797 /* Fonts */ = {
 			isa = PBXGroup;
 			children = (
+				71665ED026F8A213001A2797 /* Kanit-Light.ttf */,
+				71665ECF26F8A213001A2797 /* Kanit-Regular.ttf */,
 			);
 			path = Fonts;
 			sourceTree = "<group>";
@@ -296,6 +302,8 @@
 				71665E9C26F83882001A2797 /* LaunchScreen.storyboard in Resources */,
 				71665E9926F83882001A2797 /* Assets.xcassets in Resources */,
 				71665E9726F83881001A2797 /* AutomateBoost.storyboard in Resources */,
+				71665ED226F8A213001A2797 /* Kanit-Light.ttf in Resources */,
+				71665ED126F8A213001A2797 /* Kanit-Regular.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
