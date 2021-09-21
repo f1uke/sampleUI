@@ -59,7 +59,8 @@ class AutomateBoost: UIViewController {
         let toolBar = UIToolbar()
         toolBar.sizeToFit()
         let donBtn = UIBarButtonItem(barButtonSystemItem: .done, target: nil, action: #selector(doneStartDatePressed))
-        toolBar.setItems([donBtn], animated: true)
+        let space = UIBarButtonItem.init(barButtonSystemItem: .flexibleSpace, target: nil, action: nil)
+        toolBar.setItems([space, donBtn], animated: true)
         return toolBar
     }
     
@@ -67,7 +68,8 @@ class AutomateBoost: UIViewController {
         let toolBar = UIToolbar()
         toolBar.sizeToFit()
         let donBtn = UIBarButtonItem(barButtonSystemItem: .done, target: nil, action: #selector(doneEndDatePressed))
-        toolBar.setItems([donBtn], animated: true)
+        let space = UIBarButtonItem.init(barButtonSystemItem: .flexibleSpace, target: nil, action: nil)
+        toolBar.setItems([space, donBtn], animated: true)
         return toolBar
     }
     

@@ -81,8 +81,8 @@
                                                         <color key="textColor" red="0.78824597600000001" green="0.78821605439999998" blue="0.78823631999999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
-                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Automate Boost" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qYL-4X-qJ9">
-                                                        <rect key="frame" x="93" y="30" width="175.5" height="36"/>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Automate Boost" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qYL-4X-qJ9">
+                                                        <rect key="frame" x="93" y="30" width="228" height="36"/>
                                                         <fontDescription key="fontDescription" name="Kanit-Regular" family="Kanit" pointSize="24"/>
                                                         <color key="textColor" red="0.33222240209999998" green="0.71525663139999995" blue="0.60391116140000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                         <nil key="highlightedColor"/>
@@ -266,6 +266,7 @@
                                                 <constraints>
                                                     <constraint firstItem="nAj-cL-h1k" firstAttribute="trailing" secondItem="tjI-l9-MRx" secondAttribute="trailing" id="0eU-1q-krF"/>
                                                     <constraint firstItem="ldd-xV-JQZ" firstAttribute="leading" secondItem="dxf-t9-xi5" secondAttribute="leading" constant="16" id="EIa-kj-Phs"/>
+                                                    <constraint firstItem="zu8-SR-2pb" firstAttribute="leading" secondItem="qYL-4X-qJ9" secondAttribute="trailing" constant="4" id="K2e-4s-eck"/>
                                                     <constraint firstItem="g22-62-lQl" firstAttribute="centerY" secondItem="qYL-4X-qJ9" secondAttribute="centerY" id="N3h-6S-WRB"/>
                                                     <constraint firstItem="ldd-xV-JQZ" firstAttribute="top" secondItem="qYL-4X-qJ9" secondAttribute="bottom" constant="24" id="O22-7j-Xbr"/>
                                                     <constraint firstItem="qYL-4X-qJ9" firstAttribute="leading" secondItem="g22-62-lQl" secondAttribute="trailing" constant="24" id="U3l-bh-0LM"/>
@@ -311,7 +312,7 @@
                                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ROE-eE-YO5" customClass="UICustomView" customModule="sampleUI" customModuleProvider="target">
                                                                 <rect key="frame" x="0.0" y="0.0" width="173" height="55"/>
                                                                 <subviews>
-                                                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="วันที่เริ่มต้นแคมเปญ" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="g9J-XR-CWg">
+                                                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="วันที่เริ่มต้นแคมเปญ" textAlignment="natural" adjustsFontForContentSizeCategory="YES" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="g9J-XR-CWg">
                                                                         <rect key="frame" x="13" y="0.0" width="128" height="55"/>
                                                                         <fontDescription key="fontDescription" name="Kanit-Regular" family="Kanit" pointSize="14"/>
                                                                         <textInputTraits key="textInputTraits"/>
@@ -350,7 +351,7 @@
                                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="HHk-rm-aGf" customClass="UICustomView" customModule="sampleUI" customModuleProvider="target">
                                                                 <rect key="frame" x="189" y="0.0" width="173" height="55"/>
                                                                 <subviews>
-                                                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="วันที่สิ้นสุดแคมเปญ" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="mQL-2B-vPd">
+                                                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="วันที่สิ้นสุดแคมเปญ" textAlignment="natural" adjustsFontForContentSizeCategory="YES" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="mQL-2B-vPd">
                                                                         <rect key="frame" x="13" y="0.0" width="128" height="55"/>
                                                                         <fontDescription key="fontDescription" name="Kanit-Regular" family="Kanit" pointSize="14"/>
                                                                         <textInputTraits key="textInputTraits"/>
@@ -1020,6 +1021,9 @@
         </scene>
     </scenes>
     <designables>
+        <designable name="Jg3-f0-Fzj">
+            <size key="intrinsicContentSize" width="43" height="42"/>
+        </designable>
         <designable name="qwh-4k-QcQ">
             <size key="intrinsicContentSize" width="72" height="33"/>
         </designable>
