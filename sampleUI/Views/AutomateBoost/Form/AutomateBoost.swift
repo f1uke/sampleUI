@@ -49,6 +49,7 @@ class AutomateBoost: UIViewController {
         timePicker.datePickerMode = .time
         timePicker.preferredDatePickerStyle = .wheels
         timePicker.backgroundColor = #colorLiteral(red: 1, green: 1, blue: 1, alpha: 1)
+        timePicker.locale = LocaleDateTime.th
         
         timeToolBar.translatesAutoresizingMaskIntoConstraints = false
         timeToolBar.barStyle = .default
