@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="Kanit-Regular.ttf">
+            <string>Kanit-Regular</string>
+        </array>
+    </customFonts>
+    <scenes>
+        <!--Dialog View Controller-->
+        <scene sceneID="s0d-6b-0kx">
+            <objects>
+                <viewController storyboardIdentifier="DialogViewController" id="Y6W-OH-hqX" customClass="DialogViewController" customModule="sampleUI" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="5EZ-qb-Rvc">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="r40-Eq-u8E" customClass="UICustomView" customModule="sampleUI" customModuleProvider="target">
+                                <rect key="frame" x="50" y="384" width="314" height="128"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="text" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="h1f-nC-CYI">
+                                        <rect key="frame" x="8" y="49" width="298" height="30"/>
+                                        <fontDescription key="fontDescription" name="Kanit-Regular" family="Kanit" pointSize="20"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstItem="h1f-nC-CYI" firstAttribute="leading" secondItem="r40-Eq-u8E" secondAttribute="leading" constant="8" id="TN4-fd-bp9"/>
+                                    <constraint firstAttribute="trailing" secondItem="h1f-nC-CYI" secondAttribute="trailing" constant="8" id="Z7i-Jg-0na"/>
+                                    <constraint firstItem="h1f-nC-CYI" firstAttribute="centerX" secondItem="r40-Eq-u8E" secondAttribute="centerX" id="dYB-gI-dQz"/>
+                                    <constraint firstAttribute="height" constant="128" id="fAb-1B-r1T"/>
+                                    <constraint firstItem="h1f-nC-CYI" firstAttribute="centerY" secondItem="r40-Eq-u8E" secondAttribute="centerY" id="hgF-kN-1qT"/>
+                                </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="5"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </view>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="vDu-zF-Fre"/>
+                        <color key="backgroundColor" red="0.65490196079999996" green="0.65490196079999996" blue="0.65490196079999996" alpha="0.20000000000000001" colorSpace="custom" customColorSpace="displayP3"/>
+                        <constraints>
+                            <constraint firstItem="r40-Eq-u8E" firstAttribute="centerX" secondItem="5EZ-qb-Rvc" secondAttribute="centerX" id="TMa-LI-B9b"/>
+                            <constraint firstItem="r40-Eq-u8E" firstAttribute="centerY" secondItem="5EZ-qb-Rvc" secondAttribute="centerY" id="ogZ-ec-VqB"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="r40-Eq-u8E" secondAttribute="trailing" constant="50" id="t0P-Jq-nm1"/>
+                            <constraint firstItem="r40-Eq-u8E" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="50" id="uL6-cC-B8q"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="messageLabel" destination="h1f-nC-CYI" id="r9q-0G-Biu"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="70" y="48"/>
+        </scene>
+    </scenes>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

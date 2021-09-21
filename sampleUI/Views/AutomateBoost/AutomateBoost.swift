@@ -196,6 +196,13 @@ extension AutomateBoost: UITableViewDelegate, UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         if viewModel.selectTime == nil || viewModel.selectTime!.isEmpty || indexPath.row == viewModel.selectTime?.count {
+            
+            if viewModel.selectTime?.count ?? 0 >= 6 {
+                let vc = DialogViewController.initial(message: "ไม่สามารถเพิ่มรายการได้มากกว่า 6 รายการ")
+                self.present(vc, animated: true)
+                return
+            }
+            
             setupSelectTime()
             self.view.addSubview(self.timePicker)
             self.view.addSubview(self.timeToolBar)

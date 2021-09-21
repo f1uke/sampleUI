@@ -26,6 +26,9 @@
 		71665EE426F993D7001A2797 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71665EE226F993D7001A2797 /* Constants.swift */; };
 		71665EE526F993D7001A2797 /* AppUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71665EE326F993D7001A2797 /* AppUtils.swift */; };
 		71665EE726F9999F001A2797 /* AutomateBoostViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71665EE626F9999F001A2797 /* AutomateBoostViewModel.swift */; };
+		71665EEF26F9B021001A2797 /* Components.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 71665EEE26F9B021001A2797 /* Components.storyboard */; };
+		71984EA626F9B1330060DFA9 /* DialogViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71984EA526F9B1330060DFA9 /* DialogViewController.swift */; };
+		71984EA826F9B1590060DFA9 /* Storyboards.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71984EA726F9B1590060DFA9 /* Storyboards.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -71,6 +74,9 @@
 		71665EE226F993D7001A2797 /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		71665EE326F993D7001A2797 /* AppUtils.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppUtils.swift; sourceTree = "<group>"; };
 		71665EE626F9999F001A2797 /* AutomateBoostViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AutomateBoostViewModel.swift; sourceTree = "<group>"; };
+		71665EEE26F9B021001A2797 /* Components.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Components.storyboard; sourceTree = "<group>"; };
+		71984EA526F9B1330060DFA9 /* DialogViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DialogViewController.swift; sourceTree = "<group>"; };
+		71984EA726F9B1590060DFA9 /* Storyboards.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Storyboards.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -157,6 +163,7 @@
 			isa = PBXGroup;
 			children = (
 				71665E9526F83881001A2797 /* AutomateBoost.storyboard */,
+				71665EEE26F9B021001A2797 /* Components.storyboard */,
 			);
 			path = Storyboards;
 			sourceTree = "<group>";
@@ -182,6 +189,7 @@
 			isa = PBXGroup;
 			children = (
 				71665ED726F8B52C001A2797 /* CornerPosition.swift */,
+				71984EA426F9B1140060DFA9 /* Dialog */,
 				71665ED426F8B4DE001A2797 /* UIButtons */,
 				71665ECA26F89FDB001A2797 /* UIViews */,
 			);
@@ -198,6 +206,7 @@
 		71665EC526F83AC3001A2797 /* Apps */ = {
 			isa = PBXGroup;
 			children = (
+				71984EA726F9B1590060DFA9 /* Storyboards.swift */,
 				71665E8F26F83881001A2797 /* AppDelegate.swift */,
 				71665E9126F83881001A2797 /* SceneDelegate.swift */,
 			);
@@ -247,6 +256,14 @@
 				71665EE626F9999F001A2797 /* AutomateBoostViewModel.swift */,
 			);
 			path = AutomateBoost;
+			sourceTree = "<group>";
+		};
+		71984EA426F9B1140060DFA9 /* Dialog */ = {
+			isa = PBXGroup;
+			children = (
+				71984EA526F9B1330060DFA9 /* DialogViewController.swift */,
+			);
+			path = Dialog;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -352,6 +369,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				71665EEF26F9B021001A2797 /* Components.storyboard in Resources */,
 				71665E9C26F83882001A2797 /* LaunchScreen.storyboard in Resources */,
 				71665E9926F83882001A2797 /* Assets.xcassets in Resources */,
 				71665E9726F83881001A2797 /* AutomateBoost.storyboard in Resources */,
@@ -387,8 +405,10 @@
 				71665ED826F8B52C001A2797 /* CornerPosition.swift in Sources */,
 				71665ECD26F89FDB001A2797 /* UICustomView.swift in Sources */,
 				71665EDE26F98EFA001A2797 /* TimeBoostCell.swift in Sources */,
+				71984EA826F9B1590060DFA9 /* Storyboards.swift in Sources */,
 				71665EE726F9999F001A2797 /* AutomateBoostViewModel.swift in Sources */,
 				71665EE426F993D7001A2797 /* Constants.swift in Sources */,
+				71984EA626F9B1330060DFA9 /* DialogViewController.swift in Sources */,
 				71665EE026F99140001A2797 /* TimeBoostDataCell.swift in Sources */,
 				71665E9026F83881001A2797 /* AppDelegate.swift in Sources */,
 				71665ECE26F89FDB001A2797 /* UIGradientView.swift in Sources */,
@@ -498,7 +518,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 14.5;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.1;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -553,7 +573,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 14.5;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.1;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
