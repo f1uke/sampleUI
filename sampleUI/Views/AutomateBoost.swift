@@ -9,6 +9,9 @@ import UIKit
 
 class AutomateBoost: UIViewController {
 
+    @IBOutlet weak var tableView: UITableView!
+    @IBOutlet weak var tableViewHeigh: NSLayoutConstraint!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
@@ -19,11 +22,13 @@ class AutomateBoost: UIViewController {
 
 extension AutomateBoost: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        0
+        2
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        UITableViewCell()
+        let cell = self.tableView.dequeueReusableCell(withIdentifier: TimeBoostCell.cellId) as! TimeBoostCell
+        cell.selectionStyle = .none
+        return cell
     }
     
     

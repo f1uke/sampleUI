@@ -21,6 +21,8 @@
 		71665ED226F8A213001A2797 /* Kanit-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 71665ED026F8A213001A2797 /* Kanit-Light.ttf */; };
 		71665ED626F8B4DE001A2797 /* UICustomButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71665ED526F8B4DE001A2797 /* UICustomButton.swift */; };
 		71665ED826F8B52C001A2797 /* CornerPosition.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71665ED726F8B52C001A2797 /* CornerPosition.swift */; };
+		71665EDE26F98EFA001A2797 /* TimeBoostCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71665EDD26F98EFA001A2797 /* TimeBoostCell.swift */; };
+		71665EE026F99140001A2797 /* TimeBoostDataCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71665EDF26F99140001A2797 /* TimeBoostDataCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -61,6 +63,8 @@
 		71665ED026F8A213001A2797 /* Kanit-Light.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Kanit-Light.ttf"; sourceTree = "<group>"; };
 		71665ED526F8B4DE001A2797 /* UICustomButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UICustomButton.swift; sourceTree = "<group>"; };
 		71665ED726F8B52C001A2797 /* CornerPosition.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CornerPosition.swift; sourceTree = "<group>"; };
+		71665EDD26F98EFA001A2797 /* TimeBoostCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimeBoostCell.swift; sourceTree = "<group>"; };
+		71665EDF26F99140001A2797 /* TimeBoostDataCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimeBoostDataCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -153,6 +157,7 @@
 		71665EC126F83A95001A2797 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				71665EDC26F98ED4001A2797 /* Cell */,
 				71665E9326F83881001A2797 /* AutomateBoost.swift */,
 			);
 			path = Views;
@@ -208,6 +213,15 @@
 				71665ED526F8B4DE001A2797 /* UICustomButton.swift */,
 			);
 			path = UIButtons;
+			sourceTree = "<group>";
+		};
+		71665EDC26F98ED4001A2797 /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				71665EDD26F98EFA001A2797 /* TimeBoostCell.swift */,
+				71665EDF26F99140001A2797 /* TimeBoostDataCell.swift */,
+			);
+			path = Cell;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -346,6 +360,8 @@
 				71665E9426F83881001A2797 /* AutomateBoost.swift in Sources */,
 				71665ED826F8B52C001A2797 /* CornerPosition.swift in Sources */,
 				71665ECD26F89FDB001A2797 /* UICustomView.swift in Sources */,
+				71665EDE26F98EFA001A2797 /* TimeBoostCell.swift in Sources */,
+				71665EE026F99140001A2797 /* TimeBoostDataCell.swift in Sources */,
 				71665E9026F83881001A2797 /* AppDelegate.swift in Sources */,
 				71665ECE26F89FDB001A2797 /* UIGradientView.swift in Sources */,
 				71665E9226F83881001A2797 /* SceneDelegate.swift in Sources */,
