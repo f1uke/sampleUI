@@ -28,4 +28,7 @@ class AutomateBoostViewModel {
     var friday: Bool = false
     var saturday: Bool = false
     
+    //
+    var selectTime: [Date]?
+    
 }

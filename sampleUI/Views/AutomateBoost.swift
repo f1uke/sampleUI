@@ -25,6 +25,8 @@ class AutomateBoost: UIViewController {
     
     
     let datePicker = UIDatePicker()
+    var timePicker = UIDatePicker()
+    var timeToolBar = UIToolbar()
     
     lazy var viewModel: AutomateBoostViewModel = {
         return AutomateBoostViewModel(onErrorResponse: self.onErrorResponse)
@@ -33,10 +35,24 @@ class AutomateBoost: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         createDatePicker()
+        setupSelectTime()
     }
     
     private func onErrorResponse(_ message: String) {
         //todo
+    }
+    
+    private func setupSelectTime() {
+        timePicker.translatesAutoresizingMaskIntoConstraints = false
+        timePicker.autoresizingMask = .flexibleWidth
+        timePicker.datePickerMode = .time
+        timePicker.preferredDatePickerStyle = .wheels
+        timePicker.backgroundColor = #colorLiteral(red: 1, green: 1, blue: 1, alpha: 1)
+        
+        timeToolBar.translatesAutoresizingMaskIntoConstraints = false
+        timeToolBar.barStyle = .default
+        timeToolBar.items = [UIBarButtonItem.init(barButtonSystemItem: .flexibleSpace, target: nil, action: nil), UIBarButtonItem(title: "Done", style: .done, target: self, action: #selector(self.onDoneSelectTimeClicked))]
+        timeToolBar.sizeToFit()
     }
     
     func createStartDateToolbar() -> UIToolbar {
@@ -126,17 +142,71 @@ class AutomateBoost: UIViewController {
         changeImageCheckbox()
     }
     
+    @objc func onDoneSelectTimeClicked() {
+        if viewModel.selectTime == nil {
+            viewModel.selectTime = []
+        }
+        viewModel.selectTime?.append(timePicker.date)
+        self.tableView.reloadData()
+        
+        let itemCount = viewModel.selectTime?.count ?? 0
+        self.tableViewHeigh.constant = self.tableView.contentSize.height + CGFloat((8 * itemCount))
+        self.view.layoutIfNeeded()
+        
+        timeToolBar.removeFromSuperview()
+        timePicker.removeFromSuperview()
+    }
+    
 }
 
 extension AutomateBoost: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        2
+        if viewModel.selectTime == nil {
+            return 1
+        } else {
+            return viewModel.selectTime!.count + 1
+        }
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = self.tableView.dequeueReusableCell(withIdentifier: TimeBoostCell.cellId) as! TimeBoostCell
-        cell.selectionStyle = .none
-        return cell
+        if viewModel.selectTime == nil || viewModel.selectTime!.isEmpty {
+            let cell = self.tableView.dequeueReusableCell(withIdentifier: TimeBoostCell.cellId) as! TimeBoostCell
+            cell.selectionStyle = .none
+            return cell
+        } else {
+            if indexPath.row == viewModel.selectTime?.count {
+                let cell = self.tableView.dequeueReusableCell(withIdentifier: TimeBoostCell.cellId) as! TimeBoostCell
+                cell.selectionStyle = .none
+                return cell
+            } else {
+                let cell = self.tableView.dequeueReusableCell(withIdentifier: TimeBoostDataCell.cellId) as! TimeBoostDataCell
+                cell.selectionStyle = .none
+                return cell
+            }
+        }
+        
+    }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        if viewModel.selectTime == nil || viewModel.selectTime!.isEmpty || indexPath.row == viewModel.selectTime?.count {
+            setupSelectTime()
+            self.view.addSubview(self.timePicker)
+            self.view.addSubview(self.timeToolBar)
+            
+            NSLayoutConstraint.activate([
+                self.timePicker.bottomAnchor.constraint(equalTo: self.view.bottomAnchor),
+                self.timePicker.leftAnchor.constraint(equalTo: self.view.leftAnchor),
+                self.timePicker.rightAnchor.constraint(equalTo: self.view.rightAnchor),
+                self.timePicker.heightAnchor.constraint(equalToConstant: 300)
+            ])
+            
+            NSLayoutConstraint.activate([
+                self.timeToolBar.bottomAnchor.constraint(equalTo: self.timePicker.topAnchor),
+                self.timeToolBar.leftAnchor.constraint(equalTo: self.view.leftAnchor),
+                self.timeToolBar.rightAnchor.constraint(equalTo: self.view.rightAnchor),
+                self.timeToolBar.heightAnchor.constraint(equalToConstant: 50)
+            ])
+        }
     }
     
     
