@@ -6,6 +6,7 @@
 //
 
 import Foundation
+import UIKit
 
 class Messages {
     static let _serviceError = "เกิดข้อผิดพลาด"
@@ -24,4 +25,8 @@ enum PatternDateFormatter: String {
 enum LocaleDateTime {
     static let th = Locale(identifier: "th_TH")
     static let en = Locale(identifier: "en_US_POSIX")
+}
+
+enum AppFonts {
+    static let KanitLight14 = UIFont(name: "Kanit-Light", size: 14)
 }

@@ -1,0 +1,16 @@
+{
+  "object": {
+    "pins": [
+      {
+        "package": "TTGTags",
+        "repositoryURL": "https://github.com/zekunyan/TTGTagCollectionView",
+        "state": {
+          "branch": null,
+          "revision": "7539583a7cb7ad278945461ea26e985e759554b4",
+          "version": "2.1.0"
+        }
+      }
+    ]
+  },
+  "version": 1
+}
