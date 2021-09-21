@@ -149,7 +149,7 @@ class AutomateBoost: UIViewController {
         viewModel.selectTime?.append(timePicker.date)
         self.tableView.reloadData()
         
-        let itemCount = viewModel.selectTime?.count ?? 0
+        let itemCount = viewModel.selectTime?.count ?? 1
         self.tableViewHeigh.constant = self.tableView.contentSize.height + CGFloat((8 * itemCount))
         self.view.layoutIfNeeded()
         
@@ -181,6 +181,13 @@ extension AutomateBoost: UITableViewDelegate, UITableViewDataSource {
             } else {
                 let cell = self.tableView.dequeueReusableCell(withIdentifier: TimeBoostDataCell.cellId) as! TimeBoostDataCell
                 cell.selectionStyle = .none
+                cell.setupView(index: indexPath.row, data: viewModel.selectTime![indexPath.row]) { index in
+                    self.viewModel.selectTime?.remove(at: index)
+                    self.tableView.reloadData()
+                    let itemCount = self.viewModel.selectTime?.count ?? 1
+                    self.tableViewHeigh.constant = self.tableView.contentSize.height + CGFloat((8 * itemCount))
+                    self.view.layoutIfNeeded()
+                }
                 return cell
             }
         }
