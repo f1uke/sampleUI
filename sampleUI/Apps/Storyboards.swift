@@ -15,4 +15,10 @@ class Storyboards {
         static let dialogVC = "DialogViewController"
     }
     
+    enum automateBoostComit {
+        static let storyboard = UIStoryboard(name: "AutomateBoostComit", bundle: nil)
+        static let automateBoostCommitVC = "AutomateBoostCommitViewController"
+    }
+    
+    
 }

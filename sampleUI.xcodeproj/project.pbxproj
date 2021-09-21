@@ -29,6 +29,8 @@
 		71665EEF26F9B021001A2797 /* Components.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 71665EEE26F9B021001A2797 /* Components.storyboard */; };
 		71984EA626F9B1330060DFA9 /* DialogViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71984EA526F9B1330060DFA9 /* DialogViewController.swift */; };
 		71984EA826F9B1590060DFA9 /* Storyboards.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71984EA726F9B1590060DFA9 /* Storyboards.swift */; };
+		71984EAA26F9B4890060DFA9 /* AutomateBoostComit.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 71984EA926F9B4890060DFA9 /* AutomateBoostComit.storyboard */; };
+		71984EAD26F9B72C0060DFA9 /* AutomateBoostCommitViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71984EAC26F9B72C0060DFA9 /* AutomateBoostCommitViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -77,6 +79,8 @@
 		71665EEE26F9B021001A2797 /* Components.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Components.storyboard; sourceTree = "<group>"; };
 		71984EA526F9B1330060DFA9 /* DialogViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DialogViewController.swift; sourceTree = "<group>"; };
 		71984EA726F9B1590060DFA9 /* Storyboards.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Storyboards.swift; sourceTree = "<group>"; };
+		71984EA926F9B4890060DFA9 /* AutomateBoostComit.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = AutomateBoostComit.storyboard; sourceTree = "<group>"; };
+		71984EAC26F9B72C0060DFA9 /* AutomateBoostCommitViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AutomateBoostCommitViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -163,6 +167,7 @@
 			isa = PBXGroup;
 			children = (
 				71665E9526F83881001A2797 /* AutomateBoost.storyboard */,
+				71984EA926F9B4890060DFA9 /* AutomateBoostComit.storyboard */,
 				71665EEE26F9B021001A2797 /* Components.storyboard */,
 			);
 			path = Storyboards;
@@ -251,8 +256,8 @@
 		71665EE826F9AEAA001A2797 /* AutomateBoost */ = {
 			isa = PBXGroup;
 			children = (
-				71665EDC26F98ED4001A2797 /* Cell */,
-				71665E9326F83881001A2797 /* AutomateBoost.swift */,
+				71984EAB26F9B7170060DFA9 /* Commit */,
+				71984EAE26F9B7310060DFA9 /* Form */,
 				71665EE626F9999F001A2797 /* AutomateBoostViewModel.swift */,
 			);
 			path = AutomateBoost;
@@ -264,6 +269,23 @@
 				71984EA526F9B1330060DFA9 /* DialogViewController.swift */,
 			);
 			path = Dialog;
+			sourceTree = "<group>";
+		};
+		71984EAB26F9B7170060DFA9 /* Commit */ = {
+			isa = PBXGroup;
+			children = (
+				71984EAC26F9B72C0060DFA9 /* AutomateBoostCommitViewController.swift */,
+			);
+			path = Commit;
+			sourceTree = "<group>";
+		};
+		71984EAE26F9B7310060DFA9 /* Form */ = {
+			isa = PBXGroup;
+			children = (
+				71665EDC26F98ED4001A2797 /* Cell */,
+				71665E9326F83881001A2797 /* AutomateBoost.swift */,
+			);
+			path = Form;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -371,6 +393,7 @@
 			files = (
 				71665EEF26F9B021001A2797 /* Components.storyboard in Resources */,
 				71665E9C26F83882001A2797 /* LaunchScreen.storyboard in Resources */,
+				71984EAA26F9B4890060DFA9 /* AutomateBoostComit.storyboard in Resources */,
 				71665E9926F83882001A2797 /* Assets.xcassets in Resources */,
 				71665E9726F83881001A2797 /* AutomateBoost.storyboard in Resources */,
 				71665ED226F8A213001A2797 /* Kanit-Light.ttf in Resources */,
@@ -407,6 +430,7 @@
 				71665EDE26F98EFA001A2797 /* TimeBoostCell.swift in Sources */,
 				71984EA826F9B1590060DFA9 /* Storyboards.swift in Sources */,
 				71665EE726F9999F001A2797 /* AutomateBoostViewModel.swift in Sources */,
+				71984EAD26F9B72C0060DFA9 /* AutomateBoostCommitViewController.swift in Sources */,
 				71665EE426F993D7001A2797 /* Constants.swift in Sources */,
 				71984EA626F9B1330060DFA9 /* DialogViewController.swift in Sources */,
 				71665EE026F99140001A2797 /* TimeBoostDataCell.swift in Sources */,

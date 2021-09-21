@@ -39,7 +39,8 @@ class AutomateBoost: UIViewController {
     }
     
     private func onErrorResponse(_ message: String) {
-        //todo
+        let vc = DialogViewController.initial(message: message)
+        self.present(vc, animated: true)
     }
     
     private func setupSelectTime() {
@@ -142,6 +143,11 @@ class AutomateBoost: UIViewController {
         viewModel.friday = true
         viewModel.saturday = true
         changeImageCheckbox()
+    }
+    
+    @IBAction func nextPressed(_ sender: Any) {
+        let vc = AutomateBoostCommitViewController.initial(viewModel: self.viewModel)
+        self.navigationController?.pushViewController(vc, animated: true)
     }
     
     @objc func onDoneSelectTimeClicked() {
