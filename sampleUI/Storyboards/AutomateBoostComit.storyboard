@@ -65,7 +65,7 @@
                                 <rect key="frame" x="0.0" y="104" width="414" height="792"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Vzy-8x-o3F">
-                                        <rect key="frame" x="0.0" y="0.0" width="414" height="745"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="414" height="929"/>
                                         <subviews>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="uYF-rM-ncd" customClass="UICustomView" customModule="sampleUI" customModuleProvider="target">
                                                 <rect key="frame" x="8" y="8" width="398" height="242"/>
@@ -231,7 +231,7 @@
                                                 </userDefinedRuntimeAttributes>
                                             </view>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="fga-NS-sDk" customClass="UICustomView" customModule="sampleUI" customModuleProvider="target">
-                                                <rect key="frame" x="8" y="258" width="398" height="399"/>
+                                                <rect key="frame" x="8" y="258" width="398" height="583"/>
                                                 <subviews>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="ช่วงวันที่ Boost" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YJ2-n9-6bi">
                                                         <rect key="frame" x="18" y="18" width="99" height="24"/>
@@ -284,13 +284,21 @@
                                                             <constraint firstAttribute="height" constant="184" id="lSI-Zr-wKX"/>
                                                         </constraints>
                                                     </view>
+                                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="feE-np-H8u">
+                                                        <rect key="frame" x="24" y="391" width="350" height="184"/>
+                                                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="height" constant="184" id="SDl-II-62d"/>
+                                                        </constraints>
+                                                    </view>
                                                 </subviews>
                                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <constraints>
                                                     <constraint firstItem="hfx-WK-Pl2" firstAttribute="top" secondItem="CUk-bd-4oM" secondAttribute="bottom" constant="4" id="0K8-If-CFO"/>
-                                                    <constraint firstAttribute="bottom" secondItem="u1d-oP-tri" secondAttribute="bottom" constant="16" id="29S-ri-UeW"/>
                                                     <constraint firstItem="5FJ-Is-9jO" firstAttribute="top" secondItem="hfx-WK-Pl2" secondAttribute="bottom" constant="8" id="2Sc-4r-oiw"/>
                                                     <constraint firstItem="cb6-47-yff" firstAttribute="top" secondItem="Re3-yA-bHg" secondAttribute="bottom" constant="8" id="3DQ-bM-Oi3"/>
+                                                    <constraint firstAttribute="trailing" secondItem="feE-np-H8u" secondAttribute="trailing" constant="24" id="Aix-b1-yKs"/>
+                                                    <constraint firstItem="feE-np-H8u" firstAttribute="leading" secondItem="fga-NS-sDk" secondAttribute="leading" constant="24" id="BO5-6G-PGg"/>
                                                     <constraint firstAttribute="trailing" secondItem="5FJ-Is-9jO" secondAttribute="trailing" constant="24" id="HwP-OU-VlX"/>
                                                     <constraint firstItem="5FJ-Is-9jO" firstAttribute="leading" secondItem="fga-NS-sDk" secondAttribute="leading" constant="24" id="JK6-YR-HeN"/>
                                                     <constraint firstAttribute="trailing" secondItem="cb6-47-yff" secondAttribute="trailing" constant="24" id="JdG-e6-Xyt"/>
@@ -302,6 +310,8 @@
                                                     <constraint firstItem="Re3-yA-bHg" firstAttribute="leading" secondItem="fga-NS-sDk" secondAttribute="leading" constant="18" id="Y5h-Uq-UfQ"/>
                                                     <constraint firstItem="cb6-47-yff" firstAttribute="leading" secondItem="fga-NS-sDk" secondAttribute="leading" constant="24" id="c5r-ON-hMQ"/>
                                                     <constraint firstItem="CUk-bd-4oM" firstAttribute="leading" secondItem="YJ2-n9-6bi" secondAttribute="leading" id="dyb-tq-vSe"/>
+                                                    <constraint firstItem="feE-np-H8u" firstAttribute="top" secondItem="u1d-oP-tri" secondAttribute="bottom" constant="8" symbolic="YES" id="g5a-wT-xPZ"/>
+                                                    <constraint firstAttribute="bottom" secondItem="feE-np-H8u" secondAttribute="bottom" constant="8" id="gmI-f3-dRn"/>
                                                     <constraint firstItem="0Go-nu-fJA" firstAttribute="top" secondItem="5FJ-Is-9jO" secondAttribute="bottom" constant="16" id="itl-UV-Jde"/>
                                                     <constraint firstItem="u1d-oP-tri" firstAttribute="leading" secondItem="0Go-nu-fJA" secondAttribute="leading" id="nvZ-4a-dvH"/>
                                                     <constraint firstItem="0Go-nu-fJA" firstAttribute="leading" secondItem="hfx-WK-Pl2" secondAttribute="leading" id="vSZ-Iq-bZh"/>
@@ -324,7 +334,7 @@
                                                 </userDefinedRuntimeAttributes>
                                             </view>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EnL-bM-wTp" customClass="UICustomButton" customModule="sampleUI" customModuleProvider="target">
-                                                <rect key="frame" x="24" y="681" width="366" height="40"/>
+                                                <rect key="frame" x="24" y="865" width="366" height="40"/>
                                                 <color key="backgroundColor" red="0.3411764706" green="0.72156862749999995" blue="0.61176470589999998" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="40" id="lXG-j4-Kg4"/>
@@ -338,6 +348,9 @@
                                                         <real key="value" value="20"/>
                                                     </userDefinedRuntimeAttribute>
                                                 </userDefinedRuntimeAttributes>
+                                                <connections>
+                                                    <action selector="savePressed:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="xKW-Vu-dHU"/>
+                                                </connections>
                                             </button>
                                         </subviews>
                                         <color key="backgroundColor" red="0.94117647058823528" green="0.94117647058823528" blue="0.94509803921568625" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
@@ -384,6 +397,8 @@
                         <outlet property="dayTagView" destination="Re3-yA-bHg" id="wnm-MP-QWP"/>
                         <outlet property="dayTagViewHeigh" destination="lSI-Zr-wKX" id="rTc-E3-69K"/>
                         <outlet property="startEndDateLabel" destination="CUk-bd-4oM" id="82p-yk-07N"/>
+                        <outlet property="timeTagView" destination="feE-np-H8u" id="0tV-Mu-B05"/>
+                        <outlet property="timeTagViewHeigh" destination="SDl-II-62d" id="BDM-hG-4vk"/>
                         <outlet property="totalDayLabel" destination="hfx-WK-Pl2" id="sFI-Ct-qas"/>
                     </connections>
                 </viewController>

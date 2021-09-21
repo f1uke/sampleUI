@@ -12,10 +12,12 @@ class DialogViewController: UIViewController {
     @IBOutlet weak var messageLabel: UILabel!
     
     private var messageString: String?
+    var onDismiss: ( () -> Void )?
     
-    class func initial(message: String?) -> DialogViewController {
+    class func initial(message: String?, onDismiss: ( () -> Void )? = nil) -> DialogViewController {
         let dialog = Storyboards.components.storyboard.instantiateViewController(withIdentifier: Storyboards.components.dialogVC) as! DialogViewController
         
+        dialog.onDismiss = onDismiss
         dialog.messageString = message
         dialog.modalTransitionStyle = .crossDissolve
         dialog.modalPresentationStyle = .overFullScreen
@@ -30,8 +32,10 @@ class DialogViewController: UIViewController {
     }
     
     private func delayDismiss() {
-        DispatchQueue.main.asyncAfter(deadline: .now() + 3) {
-            self.dismiss(animated: true, completion: nil)
+        DispatchQueue.main.asyncAfter(deadline: .now() + 2) {
+            self.dismiss(animated: true, completion: {
+                self.onDismiss?()
+            })
         }
     }
 
