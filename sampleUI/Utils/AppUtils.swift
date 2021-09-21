@@ -23,6 +23,14 @@ class AppUtils {
         return dateFormatter.date(from: dateString)
     }
     
+    class func totalDistance(_1st _1stDate: Date,
+                                    _2nd _2ndDate: Date,
+                                    resultIn component: Calendar.Component) -> Int? {
+        return Calendar
+            .current
+            .dateComponents([component], from: _1stDate, to: _2ndDate)
+            .value(for: component)
+    }
 }
 
 extension String{
